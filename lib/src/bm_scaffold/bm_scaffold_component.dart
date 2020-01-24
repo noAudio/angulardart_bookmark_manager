@@ -30,11 +30,28 @@ class BookmarkScaffoldComponent {
     ),
   ];
 
+  Bookmark editedBookmark;
+
   void removeBookmark(int index) {
     bookmarks.removeAt(index);
   }
 
+  updateBookmark(int index) {
+    bookmarks[index].title = editedBookmark.title;
+    bookmarks[index].description = editedBookmark.description;
+    bookmarks[index].url = editedBookmark.url;
+
+    bookmarks[index].edit = false;
+  }
+
   void editBookmark(int index) {
+    editedBookmark = Bookmark(
+      title: bookmarks[index].title,
+      description: bookmarks[index].description,
+      url: bookmarks[index].url,
+      edit: bookmarks[index].edit,
+    );
+
     bookmarks[index].edit = true;
   }
 }
