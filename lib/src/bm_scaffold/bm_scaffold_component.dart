@@ -1,11 +1,12 @@
 import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
 import '../model/bookmark.dart';
+import '../bm_form/bm_form_component.dart';
 
 @Component(
   selector: 'bm-scaffold',
   templateUrl: 'bm_scaffold_component.html',
-  directives: [coreDirectives, formDirectives],
+  directives: [coreDirectives, formDirectives, BookmarkFormComponent],
 )
 class BookmarkScaffoldComponent {
   final List bookmarks = [
