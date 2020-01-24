@@ -14,18 +14,13 @@ class BookmarkFormComponent implements OnInit {
 
   @override
   Future<Null> ngOnInit() async {
-    editedBookmark = Bookmark(
-      title: bookmark.title,
-      description: bookmark.description,
-      url: bookmark.url,
-    );
+    editedBookmark = Bookmark()..update(bookmark);
   }
 
   updateBookmark() {
-    bookmark.title = editedBookmark.title;
-    bookmark.description = editedBookmark.description;
-    bookmark.url = editedBookmark.url;
-    bookmark.edit = false;
+    bookmark
+      ..update(editedBookmark)
+      ..edit = false;
   }
 
   removeBookmark() {}
