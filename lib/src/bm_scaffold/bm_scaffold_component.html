@@ -15,7 +15,7 @@
           <button class="btn btn-warning" (click)="editBookmark($i)">Edit</button>
         </div>
         <div class="card-body" *ngIf="bookmark.edit">
-          <bm-form [bookmark]="bookmark"></bm-form>
+          <bm-form [bookmark]="bookmark" (onDelete)="removeBookmark($i)"></bm-form>
         </div>
       </div>
     </div>

@@ -34,36 +34,14 @@ class BookmarkScaffoldComponent {
   Bookmark editedBookmark;
 
   void addBookmark() {
-    var newBookmark = Bookmark();
-    bookmarks.add(newBookmark);
+    bookmarks.add(Bookmark());
+  }
 
-    editedBookmark = Bookmark(
-      title: newBookmark.title,
-      description: newBookmark.description,
-      url: newBookmark.url,
-    );
+  void editBookmark(int index) {
+    bookmarks[index].edit = true;
   }
 
   void removeBookmark(int index) {
     bookmarks.removeAt(index);
-  }
-
-  void updateBookmark(int index) {
-    bookmarks[index].title = editedBookmark.title;
-    bookmarks[index].description = editedBookmark.description;
-    bookmarks[index].url = editedBookmark.url;
-
-    bookmarks[index].edit = false;
-  }
-
-  void editBookmark(int index) {
-    editedBookmark = Bookmark(
-      title: bookmarks[index].title,
-      description: bookmarks[index].description,
-      url: bookmarks[index].url,
-      edit: bookmarks[index].edit,
-    );
-
-    bookmarks[index].edit = true;
   }
 }
