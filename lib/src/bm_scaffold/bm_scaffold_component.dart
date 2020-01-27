@@ -6,7 +6,7 @@ import '../bm_form/bm_form_component.dart';
 @Component(
   selector: 'bm-scaffold',
   templateUrl: 'bm_scaffold_component.html',
-  directives: [coreDirectives, formDirectives, BookmarkFormComponent],
+  directives: [coreDirectives, BookmarkFormComponent],
 )
 class BookmarkScaffoldComponent {
   final List bookmarks = [
