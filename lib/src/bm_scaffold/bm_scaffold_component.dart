@@ -16,18 +16,21 @@ class BookmarkScaffoldComponent {
           'Go-to Dart blog containing Dart resources for beginners and beyond',
       url: 'https://creativebracket.com',
       edit: false,
+      isFresh: false,
     ),
     Bookmark(
       title: 'Dartlang Home',
       description: 'Documentation website for the Dart language and tools',
       url: 'https://dartlang.org',
       edit: false,
+      isFresh: false,
     ),
     Bookmark(
       title: 'Flutter',
       description: 'Build native mobile apps with the Flutter SDK',
       url: 'https://flutter.io',
       edit: false,
+      isFresh: false,
     ),
   ];
 

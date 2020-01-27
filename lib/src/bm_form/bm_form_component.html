@@ -23,6 +23,6 @@
     </div>
   </div>
   <button class="btn btn-success">Update</button>
-  <button class="btn btn-warning" (click)="bookmark.edit = false">Cancel</button>
+  <button class="btn btn-warning" *ngIf="!bookmark.isFresh" (click)="bookmark.edit = false">Cancel</button>
   <button class="btn btn-danger" (click)="removeBookmark()">Delete</button>
 </form>

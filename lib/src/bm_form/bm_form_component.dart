@@ -26,11 +26,12 @@ class BookmarkFormComponent implements OnInit {
 
   void updateBookmark(NgForm form) {
     submitted = true;
-    if(form.valid){
+    if (form.valid) {
       bookmark
-      ..update(editedBookmark)
-      ..edit = false;
-      }
+        ..update(editedBookmark)
+        ..edit = false
+        ..isFresh = false;
+    }
   }
 
   void removeBookmark() {

@@ -4,6 +4,7 @@ class Bookmark {
     this.description = '',
     this.url = '',
     this.edit = true,
+    this.isFresh = true,
   });
 
   void update(Bookmark bm) {
@@ -11,8 +12,9 @@ class Bookmark {
     description = bm.description;
     url = bm.url;
     edit = bm.edit;
+    isFresh = bm.isFresh;
   }
 
   String title, description, url;
-  bool edit;
+  bool edit, isFresh;
 }
